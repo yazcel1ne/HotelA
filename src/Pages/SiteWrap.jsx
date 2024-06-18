@@ -8,6 +8,7 @@ import AmenitiesAvail from "./Amenities/AmenitiesAvail.jsx";
 import Reviews from "./Review/Reviews.jsx";
 import ComeStay from "./CTA/ComeStay.jsx";
 import FAQ from "./Faq/FAQ.jsx";
+import Footer from "./Footer/Footer.jsx";
 
 const SiteWrap = () => {
   return (
@@ -20,6 +21,7 @@ const SiteWrap = () => {
       <Reviews />
       <ComeStay/>
       <FAQ/>
+     <Footer/>
     </Fragment>
   );
 };
