@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import ResponsivePadding from "../../Components/ResponsivePadding";
 import CheckIcon from "@mui/icons-material/Check";
+import PopHover from "../../Animation/PopHover";
 
 function RoomsAvail() {
   return (
@@ -51,34 +52,34 @@ function RoomsAvail() {
 
           <Box sx={{ paddingTop: "98px" }}>
             <Grid container spacing={6}>
-              <Grid item xs={12} md={12} lg={4}>
-                <Box sx={{ width: "100%",  }}>
+              <Grid item xs={12} md={12} lg={4} >
+                <PopHover>
                   <img
                     alt="Epitome"
                     style={{ width: "100%", height: "auto" }}
                     src="/Images/Pent2.png"
                   />
-                </Box>
+                </PopHover>
               </Grid>
 
               <Grid item xs={12} md={12} lg={4}>
-                <Box sx={{ width: "100%" }}>
+                <PopHover>
                   <img
                     alt="Epitome"
                     style={{ width: "100%", height: "auto" }}
                     src="/Images/Business.png"
                   />
-                </Box>
+                </PopHover>
               </Grid>
 
               <Grid item xs={12} md={12} lg={4}>
-                <Box sx={{ width: "100%" }}>
+                <PopHover>
                   <img
                     alt="Epitome"
                     style={{ width: "100%", height: "auto" }}
                     src="/Images/Master.png"
                   />
-                </Box>
+                </PopHover>
               </Grid>
             </Grid>
           </Box>
