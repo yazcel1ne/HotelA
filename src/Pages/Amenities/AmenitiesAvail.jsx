@@ -11,8 +11,10 @@ import {
 } from "@mui/material";
 import ResponsivePadding from "../../Components/ResponsivePadding";
 import CheckIcon from "@mui/icons-material/Check";
+import PopHover from "../../Animation/PopHover";
 
-function AmenitiesAvail() {
+
+const AmenitiesAvail=()=> {
   return (
     <Fragment>
       <ResponsivePadding>
@@ -51,23 +53,23 @@ function AmenitiesAvail() {
         <Box sx={{ paddingTop: "98px" }}>
           <Grid container spacing={6}>
             <Grid item xs={12} md={12} lg={6}>
-              <Box sx={{ width: "100%" }}>
+              <PopHover>
                 <img
-                  alt="Epitome"
+                  alt="Club"
                   style={{ width: "100%", height: "auto" }}
                   src="/Images/NightClub.png"
                 />
-              </Box>
+              </PopHover>
             </Grid>
 
             <Grid item xs={12} md={12} lg={6}>
-              <Box sx={{ width: "100%" }}>
+              <PopHover>
                 <img
-                  alt="Epitome"
+                  alt="Gourmet"
                   style={{ width: "100%", height: "auto" }}
                   src="/Images/Gourmet.png"
                 />
-              </Box>
+              </PopHover>
             </Grid>
           </Grid>
         </Box>
@@ -75,23 +77,23 @@ function AmenitiesAvail() {
 				<Box sx={{ paddingTop: "48px" }}>
           <Grid container spacing={6}>
             <Grid item xs={12} md={12} lg={6}>
-              <Box sx={{ width: "100%" }}>
+              <PopHover>
                 <img
                   alt="Epitome"
                   style={{ width: "100%", height: "auto" }}
                   src="/Images/Gym.png"
                 />
-              </Box>
+              </PopHover>
             </Grid>
 
             <Grid item xs={12} md={12} lg={6}>
-              <Box sx={{ width: "100%" }}>
+              <PopHover>
                 <img
                   alt="Epitome"
                   style={{ width: "100%", height: "auto" }}
                   src="/Images/Pool.png"
                 />
-              </Box>
+              </PopHover>
             </Grid>
           </Grid>
         </Box>
