@@ -14,6 +14,7 @@ const HeroSection = () => {
           backgroundPosition: 'center',
         }}
       >
+        
     
 
       </Box>

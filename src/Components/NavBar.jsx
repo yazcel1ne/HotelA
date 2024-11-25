@@ -10,7 +10,6 @@ import MenuItem from "@mui/material/MenuItem";
 import Button from "@mui/material/Button";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-import ResponsivePadding from "./ResponsivePadding";
 
 const NavBar = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -25,10 +24,17 @@ const NavBar = () => {
     setAnchorEl(null);
   };
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <Box
       sx={{
-        paddingTop: "24pxx",
+        paddingTop: "24px",
         paddingBottom: "15px",
         paddingLeft: {
           xs: "16px",
@@ -44,9 +50,16 @@ const NavBar = () => {
         },
       }}
     >
-      <AppBar position="static">
+      <AppBar position="static" sx={{ backgroundColor: "white" }}>
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              flexGrow: 1,
+              color: "black", // Make the logo black
+            }}
+          >
             Astoria
           </Typography>
           {isMobile ? (
@@ -56,6 +69,7 @@ const NavBar = () => {
                 color="inherit"
                 aria-label="menu"
                 onClick={handleMenu}
+                sx={{ color: "black" }} // Make the menu icon black
               >
                 <MenuIcon />
               </IconButton>
@@ -74,22 +88,82 @@ const NavBar = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>Home</MenuItem>
-                <MenuItem onClick={handleClose}>Rooms</MenuItem>
-                <MenuItem onClick={handleClose}>Amenities</MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    scrollToSection("hero-section");
+                    handleClose();
+                  }}
+                  sx={{ color: "black" }}
+                >
+                  Home
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    scrollToSection("rooms-section");
+                    handleClose();
+                  }}
+                  sx={{ color: "black" }}
+                >
+                  Rooms
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    scrollToSection("amenities-section");
+                    handleClose();
+                  }}
+                  sx={{ color: "black" }}
+                >
+                  Amenities
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    scrollToSection("faq-section");
+                    handleClose();
+                  }}
+                  sx={{ color: "black" }}
+                >
+                  FAQ
+                </MenuItem>
               </Menu>
             </div>
           ) : (
             <div>
-              <Button color="inherit">Home</Button>
-              <Button color="inherit">Rooms</Button>
-              <Button color="inherit">Amenities</Button>
-              <Button sx={{ marginLeft: "24px" }} variant="contained">
-                  CONTACT US
-                </Button>
+              <Button
+                onClick={() => scrollToSection("hero-section")}
+                sx={{ color: "black" }}
+              >
+                Home
+              </Button>
+              <Button
+                onClick={() => scrollToSection("rooms-section")}
+                sx={{ color: "black" }}
+              >
+                Rooms
+              </Button>
+              <Button
+                onClick={() => scrollToSection("amenities-section")}
+                sx={{ color: "black" }}
+              >
+                Amenities
+              </Button>
+              <Button
+                onClick={() => scrollToSection("faq-section")}
+                sx={{ color: "black" }}
+              >
+                FAQ
+              </Button>
+              <Button
+                sx={{
+                  marginLeft: "24px",
+                  backgroundColor: "black",
+                  color: "white",
+                }}
+                variant="contained"
+              >
+                CONTACT US
+              </Button>
             </div>
           )}
-           
         </Toolbar>
       </AppBar>
     </Box>

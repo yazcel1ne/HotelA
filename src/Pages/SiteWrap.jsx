@@ -1,7 +1,6 @@
 import { React, Fragment } from "react";
 import NavBar from "../Components/NavBar.jsx";
 import HeroWrap from "/src/Pages/Hero/HeroWrap.jsx";
-import { Box } from "@mui/material";
 import ThePenthouse from "./CTA/ThePenthouse.jsx";
 import RoomsAvail from "./Rooms/RoomsAvail.jsx";
 import AmenitiesAvail from "./Amenities/AmenitiesAvail.jsx";
@@ -14,14 +13,28 @@ const SiteWrap = () => {
   return (
     <Fragment>
       <NavBar />
-      <HeroWrap />
-      <ThePenthouse />
-      <RoomsAvail />
-      <AmenitiesAvail />
-      <Reviews />
-      <ComeStay/>
-      <FAQ/>
-     <Footer/>
+      <div id="hero-section">
+        <HeroWrap />
+      </div>
+      <div id="penthouse-section">
+        <ThePenthouse />
+      </div>
+      <div id="rooms-section">
+        <RoomsAvail />
+      </div>
+      <div id="amenities-section">
+        <AmenitiesAvail />
+      </div>
+      <div id="reviews-section">
+        <Reviews />
+      </div>
+      <div id="come-stay-section">
+        <ComeStay />
+      </div>
+      <div id="faq-section">
+        <FAQ />
+      </div>
+      <Footer />
     </Fragment>
   );
 };
