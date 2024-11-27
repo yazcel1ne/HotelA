@@ -8,7 +8,7 @@ const HeroWrap = () => {
 
     return (
         <Fragment>
-         <HeroFinder/>
+  
             <HeroSection/>
             <About/>
     
